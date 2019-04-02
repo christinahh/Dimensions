@@ -16,14 +16,11 @@ a{
   text-decoration: none;
 }
 
-#bgimg{
-  position:absolute;
-    z-index: -1;
-    margin-top:-50px;
-}
+img{
+  max-width:100%;
 
 #landing{
-  width:100%;
+  width:105%;
   height:650px;
 }
 

@@ -7,15 +7,34 @@
 body {
   font-family: sans-serif;
   margin:0px;
+  overflow-x: hidden;
 }
 
 a{
-  font-family:Montserrat,sans-serif;;
-  font-size:14px;
-  font-weight:300;
-  color:#bababa;
-  text-transform: uppercase;
+  font-family:Lato, sans-serif;
+  font-weight:400;
+  letter-spacing: 0.5px;
+  text-transform:uppercase;
+  color:#cacaca;
+  font-size:15px;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover{
+  color:#463b5b;
+  text-decoration: none;
+}
+
+#scrollToTop{
+  font-family:Montserrat,sans-serif;
+}
+
+#bgimg{
+  z-index:-99999;
+  margin-top:-20px;
+  height:90%;
+  z-index:-9999999;
 }
 
 img{
@@ -33,15 +52,16 @@ h1{
   font-weight: 700;
   font-style: normal;
   font-size: 60px;
-  margin-top:25%;
+  margin-top:-83%;
   margin-left:15%;
-  color:#ea475b;
+  color:#E85147;
   width:400px;
 }
 
 #returnlink{
   position:absolute;
-  margin-top:23.5%;
+  text-decoration: none;
+  margin-top:-85%;
   margin-left:15.3%;
   width:200px;
 }
@@ -53,61 +73,65 @@ h2{
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
-  margin-top:31%;
+  font-size:16px;
+  margin-top:-77%;
   margin-left:15.3%;
-  color:#4d4d4d;
+  color:#707070;
 }
 
 #faq{
   width:1440px;
-  height:700px;
+  height:650px;
+  padding-bottom:200px;
 }
 
 #faqbox{
   margin-left:15.5%;
-  margin-top:13%;
-  width:500px;
+  margin-top:-90%;
+  width:600px;
+
 }
 
 h3{
   font-family:Montserrat,sans-serif;
   font-weight:700;
   font-size:22px;
-  color:#ea475b;
+  color:#E85147;
   padding-top:20px;
 }
 
 .faqinfo{
   font-family:Montserrat, sans-serif;
   font-weight: 400;
-  color:#4d4d4d;
+  color:#707070;
   font-size:14px;
   line-height: 22px;
 }
 
 .topbuttonbox{
   position:absolute;
-  margin-top: -450px;
+  margin-top: -400px;
   margin-left:65%;
   width:250px;
   height:270px;
-  border:1px solid gray;
+  border:1px solid #cacaca;
   border-radius:20px 20px 20px 20px;
-  z-index:-1;
 }
 
 .selecttest{
   position:absolute;
+  display:inherit;
   background-color: white;
   color:#ea475b;
   font-family:Montserrat, sans-serif;
   font-weight:500;
   font-size:14px;
   text-transform:uppercase;
-  margin-left:69%;
-  margin-top:-458px;
+  margin-left:23%;
+  margin-top:-8px;
   padding: 0px 10px 0px 10px;
+  width:130px;
+  z-index:2;
 }
 
 #myersBriggs{
@@ -116,15 +140,15 @@ h3{
   font-style: normal;
   text-align:center;
   font-size:15px;
-  margin-top: -400px;
-  margin-left:68.7%;
+  margin-top: 40px;
+  margin-left:22%;
   background-color:#463b5b;
   color:#fff;
   border-radius:10px;
   padding:10px 17px 10px 17px;
   cursor:pointer;
   width:135px;
-  z-index:12;
+  z-index:2;
 }
 
 #HEXACO{
@@ -134,13 +158,14 @@ h3{
   text-align:center;
   font-size:15px;
   margin-top: 30px;
-  margin-left:68.7%;
+  margin-left:22%;
   background-color:#463b5b;
   color:#fff;
   border-radius:10px;
   padding:10px 17px 10px 17px;
   cursor:pointer;
   width:135px;
+  z-index:12;
 }
 
 #enneagram{
@@ -150,13 +175,14 @@ h3{
   text-align:center;
   font-size:15px;
   margin-top: 30px;
-  margin-left:68.7%;
+  margin-left:22%;
   background-color:#463b5b;
   color:#fff;
   border-radius:10px;
   padding:10px 17px 10px 17px;
   cursor:pointer;
   width:135px;
+  z-index:12;
 }
 
 #scrollToTop {
@@ -181,6 +207,12 @@ h3{
 }
 
 /* overall styles */
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
 
 #sectionBanner1, #sectionBanner2, #sectionBanner3{
   display:grid;
@@ -211,7 +243,7 @@ h3{
   font-weight: 300;
   line-height:25px;
   font-style: normal;
-  font-size:15px;
+  font-size:14px;
   color: #ece6f4;
   text-align:left;
   width:550px;
@@ -260,6 +292,7 @@ h3{
 #briggsInfo{
   grid-column: 9/16;
   grid-row: 3/5;
+  padding-top:20px;
   order:1;
 }
 
@@ -324,6 +357,7 @@ h3{
   grid-column: 9/16;
   grid-row: 3/5;
   order:1;
+  padding-top:20px;
 }
 
 #hOpenness{
@@ -412,6 +446,7 @@ h3{
   grid-column: 9/16;
   grid-row: 3/5;
   order:1;
+  padding-top:20px;
 }
 
 #gramThinking{
@@ -453,9 +488,10 @@ h3{
 /* myers briggs button */
 
 #myersButtons{
-  grid-column:1/span 13;
-  grid-row:12/16;
+  grid-column:1/span 15;
+  grid-row:12/span 16;
   padding-left:30px;
+  z-index:1;
 }
 
 .button {

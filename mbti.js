@@ -2,6 +2,10 @@ $(document).ready(function(){
     $(this).scrollTop(0);
 })
 
+$(".begin").click(function(){
+   $(window).scrollTo("#anchor",700);
+ })
+
 $("#myersBriggs").click(function(){
    $(window).scrollTo("#sectionBanner1",700);
  })
